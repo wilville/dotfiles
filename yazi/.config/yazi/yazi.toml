@@ -1,0 +1,18 @@
+# yazi.toml
+[manager]
+show_hidden = true
+
+[opener]
+edit = [
+	{ run = 'nvim "$@"', block = true, for = "unix" },
+	{ run = "nvim %*",   block = true, for = "windows" },
+]
+play = [
+	{ run = 'mpv "$@"', orphan = true, for = "unix" },
+	{ run = '"C:\Program Files\mpv.exe" %*', orphan = true, for = "windows" }
+]
+open = [
+	{ run = 'xdg-open "$@"', desc = "Open" },
+]
+# ...
+# ...

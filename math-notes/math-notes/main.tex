@@ -1,0 +1,39 @@
+\input{/home/void/math-notes/preamble.tex}
+ %! TEX root = /home/void/math-notes/main.tex
+\begin{document}
+
+\section{limits notes that are not absolute garbo}
+Limits are a way to solve what a function would be at a certain value \( a \) if it continued the same way it was. You don't care what the function actually is just what it approaches. The general form of a limit can be stated as: 
+\[
+  \lim_{x \to a} f(x) = L
+.\]
+ a is an arbitrary value that \( x \) gets infinitely close to but never actually gets to. Limits serve as a way to be able to quickly solve what would be at a discontinuity. 
+ \subsection{How to define limits from both sides}
+ you can define a limit with a superscript \( + \) or \( - \). The minus side is the left side as it is less than the value. The plus side is the left side because it is larger. 
+ \\ left hand limit formula: \( \lim_{x \to a^-} f(x)  \), right hand limit formula: \( \lim_{x \to a^+} f(x) \)
+\begin{figure}[ht]
+    \centering
+    \incfig{two-sided-limit}
+    \caption{two-sided-limit}
+    \label{fig:two-sided-limit}
+\end{figure}
+Because both limits are different it means that \( \lim_{x \to a} f(x) \) is undefined as it is equal to both of the limits.
+\subsection{When is a limit undefined}
+A limit is undefined when there is no way to tell what \( x \) approaches. If a limit is \( \lim_{x \to a} f(x) = \frac{L>0}{0} \) then it is undefined as dividing by zero is a mathematical fopah. A limit can also be "Indeterminate" if \( \lim_{x \to a} f(x) = \frac{0}{0} \) there is a way to solve this though. You can either factor it example. 
+\\
+\\
+\begin{align*}
+  & \lim_{x \to 2} \frac{x^2 -4}{x-2} &\lim_{x \to 2} \frac{x+2(x-2)}{x-2} \\
+  & \lim_{x \to 2} \frac{x+2}{1} &\lim_{x \to 2} = 4
+.\end{align*}
+\\
+the limit of the function as \( x \) approaches 2 is 4. 
+\subsection{piecewise functions}
+A way limits are often defined is through piecewise functions. for example \\
+g(x) 
+\begin{cases}
+  &x^2 \text{if} x<2 \\
+  &5x \text{if} 2 \leq x < 3 \\
+  &3x^2+2 \text{if} 3 \leq x \\
+\end{cases}
+\end{document}

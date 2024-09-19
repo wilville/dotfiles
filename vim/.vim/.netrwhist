@@ -1,0 +1,12 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =0
+let g:netrw_dirhist_0='/home/void/math-notes/ap-calculus'
+let g:netrw_dirhist_9='/home/void/.vim/plugged/vim-startify/autoload/startify'
+let g:netrw_dirhist_8='/home/void/.vim/plugged/vim-startify/plugin'
+let g:netrw_dirhist_7='/home/void/.vim/plugged/vim-startify'
+let g:netrw_dirhist_6='/home/void/.vim/plugged/vim-startify/images'
+let g:netrw_dirhist_5='/home/void/.vim/plugged/vim-startify'
+let g:netrw_dirhist_4='/home/void/.vim/plugged/vim-startify/plugin'
+let g:netrw_dirhist_3='/home/void/.vim/plugged/vim-startify/autoload'
+let g:netrw_dirhist_2='/home/void/math-notes/ap-calculus'
+let g:netrw_dirhist_1='/home/void/.vim/UltiSnips'

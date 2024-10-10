@@ -46,8 +46,15 @@ nnoremap <leader>n :NERDTreeFocus<CR>
 nnoremap <C-n> :NERDTree<CR>
 nnoremap <C-t> :NERDTreeToggle<CR>
 nnoremap <C-d> :NERDTreeFind<CR>
-
+noremap <Tab> :bn<CR>
+noremap <S-Tab> :bp<CR>
+noremap <Leader><Tab> :Bw<CR>
+noremap <Leader><S-Tab> :Bw!<CR>
+noremap <C-t> :tabnew split<CR>
 noremap <C-x> :Files<CR>
+setlocal spell
+set spelllang=nl,en_gb
+inoremap <C-l> <c-g>u<Esc>[s1z=`]a<c-g>u
 let maplocalleader = " "
 syntax enable 
 :highlight LineNr term=bold cterm=None ctermfg=LightGrey ctermbg=Black gui=NONE guifg=LightGrey guibg=Black

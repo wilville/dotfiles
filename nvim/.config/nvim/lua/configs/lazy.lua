@@ -14,8 +14,10 @@ return {
   performance = {
     rtp = {
       disabled_plugins = {
+        "friendly-snippets",
         "2html_plugin",
         "tohtml",
+        "nvim-autopairs",
         "getscript",
         "getscriptPlugin",
         "gzip",

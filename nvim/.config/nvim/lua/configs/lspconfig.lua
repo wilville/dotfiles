@@ -15,6 +15,32 @@ for _, lsp in ipairs(servers) do
   }
 end
 
+
+require'lspconfig'.texlab.setup{
+  texlab = {
+    auxDirectory = ".",
+    bibtexFormatter = "texlab",
+    build = {
+      args = { "-pdf", "-interaction=nonstopmode", "-synctex=1", "%f" },
+      executable = "latexmk",
+      forwardSearchAfter = false,
+      onSave = false
+    },
+    chktex = {
+      onEdit = false,
+      onOpenAndSave = false
+    },
+    diagnosticsDelay = 300,
+    formatterLineLength = 80,
+    forwardSearch = {
+      args = {}
+    },
+    latexFormatter = "latexindent",
+    latexindent = {
+      modifyLineBreaks = false
+    }
+  }
+}
 -- typescript
 lspconfig.tsserver.setup {
   on_attach = on_attach,

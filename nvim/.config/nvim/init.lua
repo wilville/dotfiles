@@ -21,7 +21,8 @@ vim.opt.rtp:prepend(lazypath)
 vim.cmd("set autochdir")
 local lazy_config = require "configs.lazy"
 vim.cmd("setlocal spell spelllang=en_us")
-vim.cmd("set conceallevel=2")
+vim.cmd("set nocursorline")
+vim.cmd("set mouse=")
 -- load plugins
 require("lazy").setup({
   {
@@ -49,7 +50,6 @@ end)
 
 vim.o.autowriteall = true
 
-vim.api.nvim_create_autocmd({ "FIleType" }, { pattern = "tex" , group = optional_group, command = "TSBufDisable highlight" })
 
 require('telekasten').setup({
   home = vim.fn.expand("~/zettelkasten"), -- Put the name of your notes directory here

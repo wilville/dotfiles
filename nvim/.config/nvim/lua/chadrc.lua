@@ -9,6 +9,13 @@ transparency = false,
   nvdash = {
     load_on_startup = true,
   },
+  cmp = {
+    lspkind_text = true,
+    style = "defualt",
+    format_colors = {
+    tailwind = false,
+    },
+  }
 }
 	-- hl_override = {
 	-- 	Comment = { italic = true },

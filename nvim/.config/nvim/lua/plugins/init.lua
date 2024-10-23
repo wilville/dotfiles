@@ -11,13 +11,46 @@ return {
     dependencies = {'nvim-telescope/telescope.nvim'},
   },
   {
+    "mikavilpas/yazi.nvim",
+    event = "VeryLazy",
+    keys = {
+      -- 👇 in this section, choose your own keymappings!
+      {
+        "<leader>-",
+        "<cmd>Yazi<cr>",
+        desc = "Open yazi at the current file",
+      },
+      {
+        -- Open in the current working directory
+        "<leader>cw",
+        "<cmd>Yazi cwd<cr>",
+        desc = "Open the file manager in nvim's working directory" ,
+      },
+      {
+        -- NOTE: this requires a version of yazi that includes
+        -- https://github.com/sxyazi/yazi/pull/1305 from 2024-07-18
+        '<c-up>',
+        "<cmd>Yazi toggle<cr>",
+        desc = "Resume the last yazi session",
+      },
+    },
+    opts = {
+      -- if you want to open yazi instead of netrw, see below for more info
+      open_for_directories = false,
+      keymaps = {
+        show_help = '<f1>',
+      },
+    },
+  },
+  {
     "lervag/vimtex",
     lazy = false,
-    init = function()
-      vim.g.tex_flavor = 'latex'
-      vim.g.vimtex_view_general_viewer = 'zathura'
-      vim.g.vimtex_compiler_method = 'latexmk'
+    config = function()
+      vim.g.vimtex_view_general_viewer = "zathura"
+      vim.g.vimtex_compiler_method = "latexmk"
       vim.g.vimtex_quickfix_mode = 0
+      vim.g.vimtex_syntax_enabled = 0
+      vim.g.vimtex_syntax_conceal_disable = 1
     end
   },
   {
@@ -61,7 +94,10 @@ return {
     -- vimtex isn't required if using treesitter
     dependencies = { "L3MON4D3/LuaSnip", "lervag/vimtex" },
     config = function()
-      require'luasnip-latex-snippets'.setup()
+      require'luasnip-latex-snippets'.setup({
+        use_treesitter = true,
+        allow_on_markdown = true,
+      })
       require("luasnip").config.setup { enable_autosnippets = true }
     end,
   },
@@ -86,5 +122,5 @@ return {
   {
     "mattn/calendar-vim",
     lazy = false,
-  }
+  },
 }

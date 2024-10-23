@@ -256,7 +256,7 @@ for_window [class="steamwebhelper"] move_container to workspace 5
 gaps inner 7
 gaps outer 3
 gaps top 30
-for_window [class="URxvt" instance="popup-bottom-center"] scratchpad show floating enable 
+for_window [class="URxvt" instance="popup-bottom-center"] scratchpad show floating enable focus
 
 for_window [class="steam_app_10190"] move_container to workspace 9
 # class                 border  backgr. text    indicator child_border
